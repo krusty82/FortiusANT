@@ -1379,7 +1379,7 @@ def Tacx2DongleSub(FortiusAntGui, Restart):
                 #---------------------------------------------------------------
                 # print('fe.BroadcastTrainerDataMessage', Cadence, CurrentPower, SpeedKmh, HeartRate)
                 messages.append(fe.BroadcastTrainerDataMessage (TacxTrainer.Cadence, \
-                    TacxTrainer.CurrentPower, TacxTrainer.SpeedKmh, TacxTrainer.HeartRate))
+                    TacxTrainer.CurrentPower, TacxTrainer.SpeedKmh, HeartRate))
 
                 #---------------------------------------------------------------
                 # Send/receive to Bluetooth interface
@@ -1736,7 +1736,7 @@ def Tacx2DongleSub(FortiusAntGui, Restart):
                         # Data page 0...4 HRM data
                         # Only expected when -H flag specified
                         #-------------------------------------------------------
-                        if DataPageNumber & 0x7f in (0,1,2,3,4,5,6,7,89,95):
+                        if DataPageNumber & 0x7f in (0,1,2,3,4,5,6,7,64,89,95):
                             if clv.hrm >= 0:
                                 _Channel, _DataPageNumber, _Spec1, _Spec2, _Spec3, \
                                     _HeartBeatEventTime, _HeartBeatCount, HeartRate = \
