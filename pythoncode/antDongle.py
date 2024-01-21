@@ -991,6 +991,7 @@ class clsAntDongle():
             msg51_ChannelID             (channel_HRM_s, DeviceNumber, DeviceTypeID_HRM, TransmissionType_Pairing),
             msg45_ChannelRfFrequency    (channel_HRM_s, RfFrequency_2457Mhz),
             msg43_ChannelPeriod         (channel_HRM_s, ChannelPeriod=8070),        # 4,06 Hz
+            msg44_ChannelSearchTimeout  (channel_HRM_s, 255),
             msg60_ChannelTransmitPower  (channel_HRM_s, TransmitPower_0dBm),
             msg4B_OpenChannel           (channel_HRM_s),
             msg4D_RequestMessage        (channel_HRM_s, msgID_ChannelID)
